@@ -1,14 +1,59 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: "Tom Ossowski, Director, Music Director"
+email: tom@tomossowski.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Tom Ossowski is a stage director and music director, 
+  teaches in the BFA Music Theatre Program at 
+  Florida State University, is the Producing Artistic Director 
+  for the Post Playhouse at Fort Robinson State Park in 
+  Nebraska, and is on the faculty at The Central Academy of Drama 
+  in Beijing, China.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://happycollision.github.io/jekyll.tomossowski.com/" # the base hostname & protocol for your site
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ['smart']
+
+permalink: pretty
+
+exclude:
+  - .bowerrc
+  - .gitignore
+  - bower.json
+
+prose:
+  siteurl: 'http://happycollision.github.io/jekyll.tomossowski.com/'
+  media: 'media'
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "splash"
+        field:
+          element: "text"
+          label: "Splash image"
+          value: ""
+    _posts/static:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "page"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: ""
