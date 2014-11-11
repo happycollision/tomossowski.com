@@ -1,3 +1,8 @@
+$susy: (
+  global-box-sizing: border-box,
+  gutters: 1/12
+);
+
 @import
         "../_bower_components/compass-mixin/lib/compass",
         "../_bower_components/breakpoint-sass/stylesheets/breakpoint",

@@ -1,3 +1,12 @@
+html
+  box-sizing: border-box
+
+*, *:before, *:after 
+  box-sizing: inherit
+
+body
+  padding: 6px
+
 // Header
 header.site-header
   a
@@ -22,3 +31,47 @@ header.site-header
     
 .js .site-nav ul
   display: none
+  +breakpoint($medium)
+    display: block
+
+.site-nav
+  text-align: center
+  margin-bottom: $spacing-unit
+  
+  ul
+    +container()
+    padding: 0
+    margin: 0
+    list-style: none
+
+  label, li
+    font-size: 1.3em
+    margin-bottom: gutter()
+    display: block
+
+  label, li a
+    display: block
+    padding: 8px
+    background-color: $trans-grey
+    +border-radius(3px)
+
+    &:hover
+      background-color: darken($trans-grey, 20)
+
+  +breakpoint($medium)
+    label
+      display: none
+    li
+      +span(2)
+    li:nth-of-type(2n)
+      +span(2 at 3)
+
+  +breakpoint($large)
+    li
+      display: inline !important
+      float: none !important
+      margin: auto !important
+
+      a
+        width: 10em !important
+        display: inline-block !important
