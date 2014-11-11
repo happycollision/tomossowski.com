@@ -16,6 +16,7 @@ $background-color: #fdfdfd;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "libraries",
+        "media-queries",
         "base",
         "layout"
 ;
