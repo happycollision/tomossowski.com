@@ -7,8 +7,12 @@
   <meta name="description" content="{{ site.description }}">
 
   <script src="//use.typekit.net/lbo3qcx.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>    
+  <script>try{Typekit.load();}catch(e){}</script> 
 
+  <script>
+    document.documentElement.className = document.documentElement.className.replace("no-js","js");
+  </script>
+  
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
