@@ -5,7 +5,7 @@ html
   box-sizing: inherit
 
 body
-  padding: 6px
+  padding: 0 6px
   max-width: 650px
   margin: auto
 
@@ -36,6 +36,8 @@ header.site-header
     +breakpoint($large)
       font-size: 5em
     
+// Main Nav
+
 .js .site-nav ul
   display: none
   +breakpoint($medium)
@@ -62,6 +64,10 @@ header.site-header
     padding: 8px
     background-color: $trans-grey
     +border-radius($border-radius)
+
+    &, &:link, &:hover, &:visited
+      color: $text-color
+
 
     &:hover
       background-color: darken($trans-grey, 20)
@@ -118,3 +124,25 @@ header.site-header
   .attribution
     text-align: right
 
+// Articles
+
+article
+  margin: $spacing-unit auto
+
+  & > h2
+    text-align: center
+
+.post-link
+  text-decoration: none
+  color: $text-color
+
+
+// Footer
+
+.site-footer
+  background-color: darken($trans-grey, 0)
+  margin-top: $spacing-unit *2
+  margin-bottom: 0
+  padding: $spacing-unit 0
+
+  +fw-bars
