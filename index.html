@@ -16,8 +16,11 @@ layout: default
   {% for post in site.posts %}
     <article>
       <h2>
-        {% comment %}<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>{% endcomment %}
-        {{ post.title }}
+        {% if post.link %}
+          <a class="post-link outgoing" href="{{ post.link }}">{{ post.title }} &#10141;</a>
+        {% else %}
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% endif %}
       </h2>
       <div class="post-content">
         {{ post.content }}

@@ -4,12 +4,27 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-title">
+      {% if page.link %}
+        <a href="{{page.link}}">
+      {% endif %}
+      
+        {{ page.title }}
+      
+      {% if page.link %}
+        &#10141;
+        </a>
+      {% endif %}
+    </h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
   <article class="post-content">
     {{ content }}
+
+    {% if page.link %}
+      <p>Check it out at <a href="{{page.link}}">{{page.link}}</a>.</p>
+    {% endif %}
   </article>
 
 </div>
