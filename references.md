@@ -4,8 +4,17 @@ title: References
 permalink: /references/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+__Martha Cooper__  
+Associate Professor Costume Design  
+Florida State University
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+__Gavin Mayer__  
+Director – Arvada Center Denver Colorado
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+__Roger Bechtel__  
+Weitz Center for Creativity  
+Carleton College
+
+__Eric Koger__  
+Production Manager, Audio Visual Solutions  
+Scenic and Lighting Desiger
