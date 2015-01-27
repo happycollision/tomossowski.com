@@ -16,12 +16,26 @@ $background-color: #eee;
 $trans-grey:       #bbb;
 $border-radius:    3px;
 
+@mixin serif {
+  font-family: "garamond pro", "garamond-premier-pro-subhead", Times, serif;
+}
+
+@mixin bold-heading-type {
+  font-family: "azo-sans-uber", "Helvetica Black", Helvetica, sans-serif;
+}
+
+$main-text-color: #222;
+$main-bg-color: #eee;
+$alt-bg-color: #bbb;
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "libraries",
+        "mixins",
         "media-queries",
         "base",
         "helpers",
         "layout",
-        "resume"
+        "resume",
+        "portfolio"
 ;
