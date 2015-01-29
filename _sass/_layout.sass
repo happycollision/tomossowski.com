@@ -16,9 +16,16 @@ body
 .entry-content, header
   +clearfix
 
-.entry-content.page-biography  
+.entry-content  
+  margin-left: auto
+  margin-right: auto
+  max-width: 500px
+
   +breakpoint($large)
     max-width: 700px
+
+.entry-content.page-portfolio
+  max-width: 100%
 
 // Header
 header.site-header
