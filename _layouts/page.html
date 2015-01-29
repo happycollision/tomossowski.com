@@ -8,7 +8,7 @@ layout: default
     <h2 class="page-title">{{ page.title }}</h2>
   </header>
 
-  <article class="entry-content">
+  <article class="entry-content page-{{ page.title | slugify }}">
     {{ content }}
   </article>
 
