@@ -3,6 +3,7 @@
 --------------------------------------------------------------------*/
 .portfolio_item, .portfolio_item * {
   //@include box-sizing;
+  font-size: $base-font-size;
 }
 
 .portfolio_item{
@@ -70,7 +71,7 @@
   }
   .stats{
     @extend %stats_h3;
-    
+    line-height: 1.2em;
     @include breakpoint($small){
       display: block;
       position: absolute;
@@ -83,6 +84,7 @@
   h3{
     @extend %stats_h3;
     margin-bottom:1em;
+    font-size: 1.2em
   }
   .portfolio_image{
     position: absolute;

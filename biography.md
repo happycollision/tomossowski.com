@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tom's Bio
+title: Biography
 permalink: /biography/
 ---
 

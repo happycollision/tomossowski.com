@@ -13,7 +13,7 @@ body
     max-width: 900px
     font-size: 1.2em
 
-.page-content
+.entry-content, header
   +clearfix
 
 // Header
@@ -142,11 +142,72 @@ article
   &.outgoing
     text-decoration: underline
 
+//*--------------------------------------------------------------------
+//    Articles
+//--------------------------------------------------------------------*/
+
+.entry-content
+  line-height: 1.5em
+
+  img:not(.portfolio_image)
+    padding: 8px
+    background-color: #fff
+    margin: 4px
+    box-shadow: 1px 1px 1px darken($main-bg-color, 20)
+  
+
+
+.entry-content img.bio-image 
+  max-width: 100%
+
+  +breakpoint($medium)
+    width: 300px
+    float: left
+    margin-right: 16px
+  
+
+
+.page-title
+  +trans-grey
+  color: $main-bg-color
+  font-size: 5em
+  line-height: 0.6em
+  text-align: right
+  margin: 0.7em auto 0.2em
+  +border-radius()
+
+
+
+/*  Some crazy styles that might screw things up in ceratin browsers, but that give the off baseline text look
+  I am using modernizr to test for border-radius to then guess that : before will also work */
+.borderradius .page-title
+  background: transparent
+  z-index: -1 /* So Descenders don't sit on top of sibling elements (.entry-content) */
+  position: relative
+  right: -6px
+
+  &:before
+    content: ""
+    display: block
+    width: 100%
+    height: 0.6em
+    +trans-grey
+    position: absolute
+    bottom: 0
+    right: 6px
+    z-index: -2
+    +border-radius()
+    overflow: hidden
+  
+
+
+/* end of crazy styles */
+
 
 // Footer
 
 .site-footer
-  background-color: darken($trans-grey, 0)
+  background-color:  darken($trans-grey, 0)
   margin-top: $spacing-unit *2
   margin-bottom: 0
   padding: $spacing-unit 0
