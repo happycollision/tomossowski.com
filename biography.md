@@ -4,6 +4,8 @@ title: Biography
 permalink: /biography/
 ---
 
+<img src="{{ site.baseurl }}/images/tom-headshot.jpg" class="bio-image" alt="">
+
 Associate Professor --- Florida State University  
 Producing Artistic Director --- Post Playhouse  
 Faculty --- The Central Academy of Drama, Beijing, China
