@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Post Playhouse 2015 Summer Season Clips
+featured: true
 ---
 
 <div class="video">

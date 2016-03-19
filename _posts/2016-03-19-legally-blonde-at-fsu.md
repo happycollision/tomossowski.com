@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Legally Blonde at FSU
+featured: true
 ---
 
 Music Direction by Tom Ossowski.
