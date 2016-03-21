@@ -1,1 +1,1 @@
-$('.content').fitVids();
+$('.entry-content').fitVids();
