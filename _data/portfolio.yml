@@ -4,21 +4,21 @@
   image: all-shook-up.png
   stats:
     theatre: Post Playhouse
-    position: Director/Artistic Director
+    position: Director & Artistic Director
 -
   title: Legally Blonde
   media: legally-blonde-fsu.mp4
   image: legally-blonde-fsu.jpg
   stats:
     theatre: Florida State University
-    position: Music Director/Director
+    position: Music Director & Director
 -
   title: A Man of No Importance
   media: /you-tube-embed/?id=Y7Nn56A3Dd8&start=48&end=105&title=A+Man+of+No+Importance
   image: amoni-post.png
   stats:
     theatre: Post Playhouse
-    position: Director/Artistic Director
+    position: Director & Artistic Director
 -
   title: "Spring Awakening: Purple Summer"
   media: spring-awakening-purple-summer.mp3
@@ -48,7 +48,7 @@
   image: hank-williams.jpg
   stats:
     theatre: Post Playhouse
-    position: Director/Artistic Director
+    position: Director & Artistic Director
 -
   title: Jesus Christ Superstar
   media: superstar.mp4
@@ -77,25 +77,25 @@
   image: nunsense.jpg
   stats:
     theatre: Post Playhouse
-    position: Director/Artistic Director
+    position: Director & Artistic Director
 -
   title: Pump Boys and Dinettes
   media: pump-boys.mp4
   image: pump-boys.jpg
   stats:
     theatre: Post Playhouse
-    position: Director/Artistic Director
+    position: Director & Artistic Director
 -
   title: The 25th Annual Putnam County Spelling Bee
   media: bee.mp4
   image: bee.jpg
   stats:
     theatre: Post Playhouse
-    position: Director/Artistic Director
+    position: Director & Artistic Director
 -
   title: Urinetown
   media: urinetown.mp4
   image: urinetown.jpg
   stats:
     theatre: Illinois Wesleyan University
-    position: Director/Music Director
+    position: Director & Music Director
