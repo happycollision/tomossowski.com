@@ -1,4 +1,11 @@
 -
+  title: Jesus Christ Superstar
+  media: superstar.mp4
+  image: superstar.jpg
+  stats:
+    theatre: Florida State University
+    position: MD and Conductor
+-
   title: All Shook Up
   media: /you-tube-embed/?id=Y7Nn56A3Dd8&start=248&title=All+Shook+Up
   image: all-shook-up.png
@@ -49,13 +56,6 @@
   stats:
     theatre: Post Playhouse
     position: Director & Artistic Director
--
-  title: Jesus Christ Superstar
-  media: superstar.mp4
-  image: superstar.jpg
-  stats:
-    theatre: Florida State University
-    position: MD and Conductor
 -
   title: The Drowsy Chaperone
   media: drowsy-fsu.mp4

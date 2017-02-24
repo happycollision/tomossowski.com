@@ -1,7 +1,14 @@
 ---
 layout: post
-title:  Orchestrations and Arranging with MainStage by Logic
-date:   2014-11-05
+title:  Orchestrations and Arranging with MainStage
+featured: true
 ---
 
-files go here
+Live Recording
+*How To Succeed in Business Without Really Trying*
+Florida State University Fall 2012
+Tom Ossowski Conducting
+
+[Overture]({{ site.baseurl }}/media/how-to-succeed-overture.mp3) (mp3) [instrumentation](/instrumentation)
+
+[Coffee Break]({{ site.baseurl }}/media/how-to-succeed-coffee-break.mp3) (mp3) [instrumentation](/instrumentation)

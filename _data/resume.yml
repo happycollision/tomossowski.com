@@ -48,7 +48,7 @@
 #    them freely.
 #
 #        Example: "Sisters of Swing: The Story of the Andrews Sisters"
-#        Visitors will see: 
+#        Visitors will see:
 #           Sisters of Swing: The Story of the Andrews Sisters
 #
 # 7. If you need to start with a quotation mark or you already needed to wrap
@@ -56,7 +56,7 @@
 #    backslash (\) directly before each inner quoation mark.
 #
 #        Example: "Sisters of Swing: The \"Story\" of the Andrews Sisters"
-#        Visitors will see: 
+#        Visitors will see:
 #           Sisters of Swing: The "Story" of the Andrews Sisters
 # <div class="row">\n<span class="cell cell-1">([0-9]{4})</span>\n<span class="cell cell-2">(.*)</span>\n<span class="cell cell-3">\((.*)\)</span>\n<span class="cell cell-4">(.*)</span>\n<div class="anchor"></div>\n</div><!-- end row -->\n
 # <div class="row">\n<span class="cell cell-1">([0-9]{4})</span>\n<span class="cell cell-2">(.*)</span>\n<span class="cell cell-3">\((.*)\)</span>\n<span class="cell cell-4">(.*)</span>\n<span class="cell cell-5(| empty)">(.*)</span>\n<div class="anchor"></div>\n</div><!-- end row -->\n
@@ -66,6 +66,21 @@ credits:
 
 - grouping: Artistic Director
   productions:
+  -
+    year: 2016
+    title: Disney's Beauty and the Beast
+    position: Post Playhouse, Fort Robinson, NE
+    company: Artistic Director
+  -
+    year: 2016
+    title: The Addams Family
+    position: Post Playhouse, Fort Robinson, NE
+    company: Artistic Director
+  -
+    year: 2016
+    title: Cabaret
+    position: Post Playhouse, Fort Robinson, NE
+    company: Artistic Director
   -
     year: 2015
     title: The Best Little Whorehouse in Texas
@@ -231,10 +246,50 @@ credits:
   productions:
 
   -
+    year: 2017
+    title: Beauty and the Beast
+    position: Florida State University, Tallahassee, FL
+    company: Director/Music Director
+  -
+    year: 2017
+    title: Lucky Stiff
+    position: The Central Academy of Drama, Beijing, China, 中國北京中央戲劇學院&nbsp;
+    company: Director
+  -
+    year: 2016
+    title: All Shook Up
+    position: Florida State University, Tallahassee, FL
+    company: Director
+  -
+    year: 2016
+    title: Legally Blonde
+    position: Post Playhouse, Fort Robinson, NE
+    company: Director
+  -
+    year: 2016
+    title: Monty Python's Spamalot
+    position: Post Playhouse, Fort Robinson, NE
+    company: Director
+  -
+    year: 2016
+    title: Senior Showcase
+    position: The Central Academy of Drama, Beijing, China, 中國北京中央戲劇學院&nbsp;
+    company: Director/Music Director
+  -
+    year: 2016
+    title: The Family (Major Motion Picture Stage Production, China)
+    position: (Fall Release — National)
+    company: Director
+  -
+    year: 2016
+    title: Legally Blonde
+    position: Florida State University, Tallahassee, FL
+    company: Director
+  -
     year: 2015
     title: The Family (a New Musical based on the novel <em>The Family</em> by Ba Jin)
     position: The Central Academy of Drama, Beijing, China, 中國北京中央戲劇學院&nbsp;
-    company: Director/Music Director
+    company: Director/Creative Team
   -
     year: 2015
     title: Grease
@@ -405,6 +460,16 @@ credits:
 - grouping: Music Director
   productions:
 
+  -
+    year: 2017
+    title: Disney's Beauty and the Beast
+    position: Florida State University, Tallahassee, FL
+    company: Music Director
+  -
+    year: 2016
+    title: All Shook Up
+    position: Florida State University, Tallahassee, FL
+    company: Music Director/Conductor
   -
     year: 2015
     title: Ragtime

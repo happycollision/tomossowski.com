@@ -14,7 +14,7 @@ layout: default
 
 <div class="posts">
 
-  
+
 {% assign posts = site.posts | where:"featured","true" %}
 {% for post in posts %}
   <article>
@@ -23,58 +23,6 @@ layout: default
       {{ post.content | markdownify }}
     </div>
   </article>
-{% endfor %}    
-
-  <article>
-    <h2>
-      The Family
-    </h2>
-    
-    <div class="entry-content">
-      <p>Tom has been working for the past year on a brand new musical in Beijing, China at The Central Academy of Drama. The musical is called <em>The Family</em> and is based on a classic Chinese novel. Tom was a part of the Creative Team and served as the American Director.</p>
-
-      <p><img src="{{ baseurl }}/images/the-family-poster.jpg" alt=""></p>
-
-      <p>Tom was also the Music Director and Conductor for Florida State University's October production of <em>A Chorus Line</em>.</p>
-      
-      <p><img src="{{ baseurl }}/images/a-chorus-line.jpg" alt=""></p>
-
-    </div>
-  </article>
-
-    
-    <article>
-      <h2>
-          Interviews about teaching in China
-      </h2>
-      <div class="entry-content">
-        <p>Tom was interviewed by two publications about his trip to Beijing to bring western musical theatre to China.</p>
-
-        <p><a href="http://www.broadwayworld.com/article/Tom-Ossowski-to-Direct-INTO-THE-WOODS-at-Bejings-Central-Academy-of-Drama-20140102">Broadway World Interview</a></p>
-
-        <p><a href="http://www.stage-directions.com/news/6298-tom-ossowski-to-teach-in-musical-theatre-in-bejing.html">Stage Directions Interview</a></p>
-
-      </div>
-    </article>
-
-    <article>
-      <h2>
-          Orchestrations and Arranging with MainStage for Logic
-      </h2>
-      <div class="entry-content">
-{% capture content %}
-Live Recording  
-*How To Succeed in Business Without Really Trying*  
-Florida State University Fall 2012  
-Tom Ossowski Conducting
-
-[Overture]({{ site.baseurl }}/media/how-to-succeed-overture.mp3) (mp3) [instrumentation](/instrumentation)
-
-[Coffee Break]({{ site.baseurl }}/media/how-to-succeed-coffee-break.mp3) (mp3) [instrumentation](/instrumentation)
-
-{% endcapture %}
-{{ content | markdownify }}
-      </div>
-    </article>
+{% endfor %}
 
 </div>
