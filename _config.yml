@@ -18,6 +18,17 @@ exclude:
   - .bowerrc
   - .gitignore
   - bower.json
+  - Guardfile
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.babel.js
+  - LICENSE.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - src
+  - tailwind.config.js
 
 prose:
   siteurl: 'http://happycollision.github.io/jekyll.tomossowski.com/'
