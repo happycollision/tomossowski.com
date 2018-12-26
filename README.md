@@ -12,3 +12,7 @@ aliased on Don's local machine as
 jkserve & be guard
 ```
 
+## Deploy
+
+1. Be sure to run both `npm i` and `bundle`
+2. `sh deploy` (from master)
