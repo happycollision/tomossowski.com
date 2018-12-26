@@ -35,9 +35,9 @@ task("buildJekyll", () => {
 
   const args = ["exec", jekyll, "build"];
 
-  if (devBuild) {
-    args.push("--incremental");
-  }
+  // if (devBuild) {
+  //   args.push("--incremental");
+  // }
 
   return spawn("bundle", args, { stdio: "inherit" });
 });
