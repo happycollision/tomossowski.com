@@ -1,5 +1,6 @@
 _site
 .jekyll-metadata
+node_modules
 
 # Don't ignore _bower_components. It is actually needed to build in github pages.
 
