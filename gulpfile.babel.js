@@ -82,6 +82,7 @@ task("startServer", () => {
       rawStylesheet,
       tailwindConfig,
       "**/*.html",
+      "**/*.js",
       "**/*.md",
       "**/*.yml",
       "!_site/**/*",
