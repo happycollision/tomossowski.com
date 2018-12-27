@@ -1,0 +1,16 @@
+---
+layout: post
+title: Post Playhouse 2018
+featured: true
+---
+
+<div class="slideshow">
+
+  {% for image in site.data.slideshows.post2018.images %}
+  <div>
+
+    <img data-lazy="{{site.data.slideshows.post2018.folder | prepend: site.baseurl}}/{{image.image}}" alt="{{image.alt}}"/>
+  </div>
+  
+  {% endfor %}
+</div>
