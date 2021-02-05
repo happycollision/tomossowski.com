@@ -1,9 +1,12 @@
----
----
-
 $(document).ready(function(){
-  {% include_relative _js/main-nav.js %}
-  {% include_relative _js/video-considerations.js %}
+  $('.site-nav').on('click', function(){
+  if ($(this).find(':checked').length > 0) {
+    $(this).find('ul').css('display','block');
+  } else {
+    $(this).find('ul').css('display','none');
+  }
+});
+  $('.entry-content').fitVids();
 
   $('.slideshow').slick({
     infinite: true,

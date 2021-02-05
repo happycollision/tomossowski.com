@@ -1,0 +1,470 @@
+@charset "UTF-8";
+/*
+ * A partial implementation of the Ruby list functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/lists.rb
+ */
+/*
+ * A partial implementation of the Ruby constants functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/constants.rb
+ */
+/*
+ * A partial implementation of the Ruby display functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
+ */
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Mobile considerations
+ */
+html, body {
+  overflow-x: hidden; }
+
+/**
+ * Basic styling
+ */
+body {
+  font-family: "museo-sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #222;
+  background-color: #eee;
+  -webkit-text-size-adjust: 100%; }
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-top: 30px;
+  margin-bottom: 15px; }
+  h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
+  p:first-child, blockquote:first-child, pre:first-child,
+  ul:first-child, ol:first-child, dl:first-child, figure:first-child {
+    margin-top: auto; }
+
+/**
+ * Images
+ */
+img, video, audio {
+  max-width: 100%;
+  vertical-align: middle; }
+
+video {
+  display: block;
+  margin: auto; }
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: 30px; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.main-wrapper {
+  padding: 0 6px;
+  max-width: 650px;
+  margin: auto; }
+  @media (min-width: 800px) {
+    .main-wrapper {
+      max-width: 900px;
+      font-size: 1.2em; } }
+
+.entry-content, header {
+  overflow: hidden;
+  *zoom: 1; }
+
+.entry-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px; }
+  @media (min-width: 800px) {
+    .entry-content {
+      max-width: 700px; } }
+
+.entry-content.page-portfolio,
+.entry-content.page-resum-eacute {
+  max-width: 100%; }
+
+header.site-header a {
+  text-decoration: none; }
+header.site-header .site-title {
+  display: block;
+  color: #444;
+  text-align: center;
+  padding: auto;
+  margin: 0.5em auto;
+  font-size: 14px;
+  font-size: 2.6em;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: "azo-sans-uber", "Helvetica Black", Helvetica, sans-serif; }
+  @media (min-width: 480px) {
+    header.site-header .site-title {
+      font-size: 4em; } }
+  @media (min-width: 800px) {
+    header.site-header .site-title {
+      font-size: 5em; } }
+
+.js .site-nav ul {
+  display: none; }
+  @media (min-width: 480px) {
+    .js .site-nav ul {
+      display: block; } }
+
+.site-nav {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px; }
+  .site-nav ul {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    .site-nav ul:after {
+      content: " ";
+      display: block;
+      clear: both; }
+  .site-nav label, .site-nav li {
+    font-size: 1.3em;
+    margin-bottom: 1.9607843137%;
+    display: block; }
+  .site-nav label, .site-nav li a {
+    display: block;
+    padding: 8px;
+    background-color: #bbb;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+    .site-nav label, .site-nav label:link, .site-nav label:hover, .site-nav label:visited, .site-nav li a, .site-nav li a:link, .site-nav li a:hover, .site-nav li a:visited {
+      color: #222; }
+    .site-nav label:hover, .site-nav li a:hover {
+      background-color: #888888; }
+  @media (min-width: 480px) {
+    .site-nav label {
+      display: none; }
+    .site-nav li {
+      width: 49.0196078431%;
+      float: left;
+      margin-right: 1.9607843137%; }
+    .site-nav li:nth-of-type(2n) {
+      width: 49.0196078431%;
+      float: right;
+      margin-right: 0; } }
+  @media (min-width: 800px) {
+    .site-nav li {
+      display: inline !important;
+      float: none !important;
+      margin: auto !important; }
+      .site-nav li a {
+        width: 10em !important;
+        display: inline-block !important; } }
+
+.praise {
+  background-color: #bbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 1em;
+  margin-bottom: 30px; }
+  .praise blockquote {
+    font-size: 1.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: relative; }
+    .praise blockquote:before {
+      position: absolute;
+      display: block;
+      font-size: 3em;
+      line-height: 0;
+      color: #6f6f6f;
+      content: "“";
+      top: 0.4em;
+      left: -0.25ex; }
+    .praise blockquote:after {
+      position: absolute;
+      display: block;
+      font-size: 3em;
+      line-height: 0;
+      color: #6f6f6f;
+      content: "”";
+      bottom: -0.1em;
+      right: -0.25ex; }
+  .praise .attribution {
+    text-align: right; }
+
+article {
+  margin: 30px auto; }
+  article > h2 {
+    text-align: center; }
+
+.post-link {
+  text-decoration: none;
+  color: #222; }
+  .post-link.outgoing {
+    text-decoration: underline; }
+
+.entry-content {
+  line-height: 1.6em; }
+  .entry-content img:not(.portfolio_image) {
+    padding: 8px;
+    background-color: #fff;
+    margin: 4px;
+    box-shadow: 1px 1px 1px #bbbbbb; }
+
+.entry-content img.bio-image {
+  max-width: 100%; }
+  @media (min-width: 480px) {
+    .entry-content img.bio-image {
+      width: 300px;
+      float: left;
+      margin-right: 16px; } }
+
+.page-title {
+  background-color: #bbb;
+  color: #eee;
+  font-size: 5em;
+  line-height: 0.6em;
+  text-align: right;
+  margin: 0.7em auto 0.2em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+/*  Some crazy styles that might screw things up in ceratin browsers, but that give the off baseline text look
+ * I am using modernizr to test for border-radius to then guess that : before will also work */
+.borderradius .page-title {
+  background: transparent;
+  z-index: -1;
+  position: relative;
+  right: -6px; }
+  .borderradius .page-title:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.6em;
+    background-color: #bbb;
+    position: absolute;
+    bottom: 0;
+    right: 6px;
+    z-index: -2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden; }
+
+/* end of crazy styles */
+.site-footer {
+  background-color: #bbbbbb;
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding: 30px 0;
+  position: relative; }
+  .site-footer:before {
+    content: "";
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 9999px;
+    left: -9999px; }
+  .site-footer:after {
+    content: "";
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 9999px;
+    right: -9999px; }
+
+/*--------------------------------------------------------------------
+    Resume
+--------------------------------------------------------------------*/
+div.resume {
+  font-size: 0.85em; }
+  div.resume div.section {
+    clear: both;
+    margin: 4em auto; }
+    div.resume div.section .section-heading {
+      font-size: 2em;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      border-bottom: 1px dotted #999;
+      display: block;
+      line-height: normal; }
+    div.resume div.section div.row {
+      clear: both;
+      width: 100%;
+      margin: 2em auto; }
+      @media (min-width: 480px) {
+        div.resume div.section div.row {
+          width: 48%;
+          clear: none; }
+          div.resume div.section div.row:nth-child(even) {
+            float: left;
+            clear: both; }
+          div.resume div.section div.row:nth-child(odd) {
+            float: right; }
+          div.resume div.section div.row .anchor {
+            clear: none; } }
+      @media (min-width: 800px) {
+        div.resume div.section div.row {
+          clear: both;
+          width: 100%;
+          margin: 0 auto 8px; }
+          div.resume div.section div.row:nth-child(even), div.resume div.section div.row:nth-child(odd) {
+            float: none; }
+          div.resume div.section div.row .anchor {
+            clear: both; } }
+      div.resume div.section div.row .cell-1 {
+        margin-right: 8px;
+        width: 3em;
+        display: inline; }
+      div.resume div.section div.row .cell-2 {
+        margin-right: 0.7em;
+        display: inline; }
+      div.resume div.section div.row .cell-3 {
+        display: block;
+        margin-right: 0;
+        font-style: italic;
+        color: #555;
+        padding-left: 2em; }
+        @media (min-width: 800px) {
+          div.resume div.section div.row .cell-3 {
+            display: inline;
+            padding-left: 0; } }
+      div.resume div.section div.row .cell-4 {
+        margin: 0px;
+        padding-left: 2em; }
+        @media (min-width: 800px) {
+          div.resume div.section div.row .cell-4 {
+            float: right;
+            margin: 0; } }
+      div.resume div.section div.row .cell-5 {
+        display: block;
+        padding-left: 2em;
+        color: #555; }
+        @media (min-width: 800px) {
+          div.resume div.section div.row .cell-5 {
+            float: left;
+            clear: both;
+            text-indent: 5em;
+            width: 100%;
+            display: inline;
+            padding: 0; } }
+      div.resume div.section div.row .cell.empty {
+        display: none; }
+
+/*--------------------------------------------------------------------
+    Portfolio
+--------------------------------------------------------------------*/
+.portfolio_item, .portfolio_item * {
+  font-size: 14px; }
+
+.portfolio_item {
+  background-color: #bbb;
+  margin: 12px auto;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  position: relative;
+  height: 200px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  overflow: hidden; }
+  .portfolio_item:hover {
+    background-color: #888888; }
+  @media (min-width: 800px) {
+    .portfolio_item {
+      width: 49.5%; }
+      .portfolio_item:nth-child(odd) {
+        float: right; }
+      .portfolio_item:nth-child(even) {
+        float: left;
+        clear: both; } }
+  .portfolio_item .meta_wrapper {
+    display: block;
+    width: 100%;
+    height: 100%; }
+    @media (min-width: 480px) {
+      .portfolio_item .meta_wrapper {
+        display: table;
+        height: 100%;
+        width: 38%;
+        margin-left: 62%;
+        padding-right: 6px; } }
+    .portfolio_item .meta_wrapper .meta {
+      display: inherit;
+      width: inherit;
+      height: inherit;
+      color: #fff;
+      text-shadow: 0 0 1px black, 0 0 1px black;
+      padding: 8px; }
+      @media (min-width: 480px) {
+        .portfolio_item .meta_wrapper .meta {
+          display: table-cell;
+          vertical-align: middle;
+          color: #222;
+          text-shadow: none;
+          padding: 5px; } }
+  .portfolio_item .stats, .portfolio_item h3 {
+    position: relative; }
+  .portfolio_item .stats {
+    line-height: 1.2em; }
+    @media (min-width: 0px) and (max-width: 479px) {
+      .portfolio_item .stats {
+        display: block;
+        position: absolute;
+        bottom: 5px;
+        right: 5px; } }
+  .portfolio_item h3 {
+    margin-bottom: 1em;
+    font-size: 1.2em; }
+  .portfolio_item .portfolio_image {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    min-height: 100%;
+    /* stretches image... but actually not too bad. */ }
+    @media (min-width: 480px) {
+      .portfolio_item .portfolio_image {
+        width: 60%; } }
+    @media (min-width: 800px) {
+      .portfolio_item .portfolio_image {
+        margin: 0; } }
