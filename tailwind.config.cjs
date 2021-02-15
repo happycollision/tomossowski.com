@@ -18,6 +18,7 @@ module.exports = {
       keyframes: true,
     },
   },
+  darkMode: "media",
   theme: {
     extend: {},
   },
