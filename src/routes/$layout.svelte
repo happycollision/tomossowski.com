@@ -1,5 +1,5 @@
 <script>
-	import "./_global.pcss";
+  import "./_global.pcss"
 </script>
 
 <slot />
