@@ -3,10 +3,10 @@
 
   const mainNav = [
     { name: "Latest", url: "/" },
-    // { name: "Biography", url: "/biography" },
-    // { name: "Portfolio", url: "/portfolio" },
-    // { name: "References", url: "/references" },
-    // { name: "Resum&eacute;", url: "/resume" },
+    { name: "Biography", url: "/biography" },
+    { name: "Portfolio", url: "/portfolio" },
+    { name: "References", url: "/references" },
+    { name: "Resum&eacute;", url: "/resume" },
   ]
 
   function nodeIsActive(node: HTMLAnchorElement, path: string) {
