@@ -25,4 +25,6 @@
 
 <MainNav {path} />
 
-<slot />
+<article class="px-2 sm:px-4">
+  <slot />
+</article>
