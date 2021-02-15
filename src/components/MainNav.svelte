@@ -39,7 +39,7 @@
     {#each mainNav as navItem}
       <li>
         <a
-          class="block px-4 py-1 hover:bg-green-500 dark:hover:bg-green-900"
+          class="block px-4 py-1 hover:bg-green-500 dark:hover:bg-green-700"
           use:active={path}
           rel="prefetch"
           href={navItem.url}>{@html navItem.name}</a
@@ -51,6 +51,6 @@
 
 <style>
   li > :global([aria-active="page"]) {
-    @apply bg-green-500 dark:bg-green-900;
+    @apply bg-green-500 dark:bg-green-700;
   }
 </style>

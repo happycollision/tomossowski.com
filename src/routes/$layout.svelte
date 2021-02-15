@@ -9,7 +9,8 @@
 
 <header>
   <h1 class="hidden">Tom Ossowski</h1>
-  <div class="w-11/12 mx-auto my-1 max-w-xl">
+  <div class="w-11/12 mx-auto my-1 max-w-xl
+    fill-current text-blue-500">
     <svg viewBox="0 0 113 14" class="font-black">
       <text x="0" y="13">Tom Ossowski</text>
     </svg>
