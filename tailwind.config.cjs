@@ -20,7 +20,11 @@ module.exports = {
   },
   darkMode: "media",
   theme: {
-    extend: {},
+    extend: {
+      minWidth: {
+        20: "5rem",
+      },
+    },
   },
   variants: {
     extend: {},
