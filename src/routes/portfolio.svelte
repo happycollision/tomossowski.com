@@ -1,16 +1,28 @@
 <script lang="ts">
+  import AudioItem from "$components/portfolio/AudioItem.svelte"
+  import VideoItem from "$components/portfolio/VideoItem.svelte"
+  import YouTubeItem from "$components/portfolio/YouTubeItem.svelte"
   import { smartyPants } from "$utils/markdown"
+
+  type YtItem = {
+    type: "youtube"
+    media: { id: string; start?: number; end?: number }
+  }
+
+  type LocalItem = {
+    type: "audio" | "video"
+    media: string
+  }
 
   type PortfolioItem = {
     title: string
-    media: string
     image: string
     displayStats: {
       theatre: string
       position: string
       mediaType?: string
     }
-  }
+  } & (LocalItem | YtItem)
 
   const MD_CONDUCTOR = "Music Director & Conductor"
   const DIR_AND_ART = "Director & Artistic Director"
@@ -24,6 +36,7 @@
   const portfolio: PortfolioItem[] = [
     {
       title: "Guys & Dolls",
+      type: "video",
       media: "guys-dolls.mp4",
       image: "guys-dolls.jpg",
       displayStats: {
@@ -33,6 +46,7 @@
     },
     {
       title: "Guys & Dolls: Bushel and a Peck",
+      type: "audio",
       media: "bushel-peck.mp3",
       image: "guys-dolls-title.png",
       displayStats: {
@@ -43,6 +57,7 @@
     },
     {
       title: "Jesus Christ Superstar",
+      type: "video",
       media: "superstar.mp4",
       image: "superstar.jpg",
       displayStats: {
@@ -52,7 +67,11 @@
     },
     {
       title: "All Shook Up",
-      media: "/you-tube-embed/?id=Y7Nn56A3Dd8&start=248&title=All+Shook+Up",
+      media: {
+        id: "Y7Nn56A3Dd8",
+        start: 249,
+      },
+      type: "youtube",
       image: "all-shook-up.png",
       displayStats: {
         theatre: POST,
@@ -61,6 +80,7 @@
     },
     {
       title: "Legally Blonde",
+      type: "video",
       media: "legally-blonde-fsu.mp4",
       image: "legally-blonde-fsu.jpg",
       displayStats: {
@@ -70,8 +90,8 @@
     },
     {
       title: "A Man of No Importance",
-      media:
-        "/you-tube-embed/?id=Y7Nn56A3Dd8&start=48&end=105&title=A+Man+of+No+Importance",
+      media: { id: "Y7Nn56A3Dd8", start: 48, end: 105 },
+      type: "youtube",
       image: "amoni-post.png",
       displayStats: {
         theatre: POST,
@@ -80,6 +100,7 @@
     },
     {
       title: "Spring Awakening: Purple Summer",
+      type: "audio",
       media: "spring-awakening-purple-summer.mp3",
       image: "spring-awakening.jpg",
       displayStats: {
@@ -90,6 +111,7 @@
     },
     {
       title: "How to Succeed in Business: Overture",
+      type: "audio",
       media: "how-to-succeed-overture.mp3",
       image: "how-to-succeed.jpg",
       displayStats: {
@@ -100,6 +122,7 @@
     },
     {
       title: "Forever Plaid",
+      type: "video",
       media: "forever-plaid.mp4",
       image: "forever-plaid.jpg",
       displayStats: {
@@ -109,6 +132,7 @@
     },
     {
       title: "Hank Williams: Lost Highway",
+      type: "video",
       media: "hank-williams.mp4",
       image: "hank-williams.jpg",
       displayStats: {
@@ -118,6 +142,7 @@
     },
     {
       title: "The Drowsy Chaperone",
+      type: "video",
       media: "drowsy-fsu.mp4",
       image: "drowsy-fsu.png",
       displayStats: {
@@ -127,6 +152,7 @@
     },
     {
       title: "Rent: I’ll Cover You",
+      type: "audio",
       media: "rent-ill-cover-you.mp3",
       image: "rent.jpg",
       displayStats: {
@@ -137,6 +163,7 @@
     },
     {
       title: "Nunsense",
+      type: "video",
       media: "nunsense.mp4",
       image: "nunsense.jpg",
       displayStats: {
@@ -146,6 +173,7 @@
     },
     {
       title: "Pump Boys and Dinettes",
+      type: "video",
       media: "pump-boys.mp4",
       image: "pump-boys.jpg",
       displayStats: {
@@ -155,6 +183,7 @@
     },
     {
       title: "The 25th Annual Putnam County Spelling Bee",
+      type: "video",
       media: "bee.mp4",
       image: "bee.jpg",
       displayStats: {
@@ -164,6 +193,7 @@
     },
     {
       title: "Urinetown",
+      type: "video",
       media: "urinetown.mp4",
       image: "urinetown.jpg",
       displayStats: {
@@ -172,6 +202,12 @@
       },
     },
   ]
+
+  let chosenItem: PortfolioItem = undefined
+
+  function handleMedia(item: PortfolioItem) {
+    chosenItem = chosenItem === item ? undefined : item
+  }
 </script>
 
 <div class="text-center my-4">
@@ -186,25 +222,44 @@
   class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-4 items-start grid-flow-row auto-rows-max text-white"
 >
   {#each portfolio as pItem}
-    <a
-      href="/media/{pItem.media}"
-      class="mx-auto w-full max-w-72 rounded-lg overflow-hidden bg-blue-900 border-2 border-blue-900 group"
+    <button
+      on:click={() => handleMedia(pItem)}
+      class="mx-auto text-left w-full max-w-72 rounded-lg overflow-hidden bg-blue-900 border-2 border-blue-900 group"
     >
-      <div class="relative w-full rounded-lg overflow-hidden">
-        <svg
-          class="fill-current absolute bottom-2 left-2 w-1/4 opacity-40 group-hover:opacity-60"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          ><path
-            d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM7 6l8 4-8 4V6z"
-          /></svg
-        >
-        <img
-          class="object-cover h-52 w-full"
+      {#if pItem.type === "youtube"}
+        <YouTubeItem
+          id={pItem.media.id}
+          start={pItem.media.start}
+          end={pItem.media.end}
+          poster="/images/portfolio/{pItem.image}"
           alt={pItem.title}
-          src="/images/portfolio/{pItem.image}"
+          unload={pItem !== chosenItem}
+          autoplay
+          controls
+          class="w-full h-52"
         />
-      </div>
+      {:else if pItem.type === "audio"}
+        <AudioItem
+          src={`/media/${pItem.media}`}
+          poster="/images/portfolio/{pItem.image}"
+          alt={pItem.title}
+          unload={pItem !== chosenItem}
+          controls
+          autoplay
+        />
+      {:else if pItem.type === "video"}
+        <VideoItem
+          src={`/media/${pItem.media}`}
+          poster="/images/portfolio/{pItem.image}"
+          alt={pItem.title}
+          unload={pItem !== chosenItem}
+          autoplay
+          controls
+          preload="none"
+          class="w-full h-52"
+        />
+      {/if}
+
       <div class="p-2 opacity-75">
         <div class="text-sm">{pItem.displayStats.theatre}</div>
         <h3 class="font-bold text-xl">
@@ -215,6 +270,6 @@
         </h3>
         <div class="text-right">{pItem.displayStats.position}</div>
       </div>
-    </a>
+    </button>
   {/each}
 </div>
