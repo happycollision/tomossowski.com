@@ -60,7 +60,7 @@ const bold: Replacer = (injectClass) => [
 ]
 
 const italic: Replacer = (injectClass) => [
-  makeFindWrapper(["__", "\\*\\*"]),
+  makeFindWrapper(["_", "\\*"]),
   (_, str1, str2) => `<em${injectClass("em")}>${str1 || str2}</em>`,
 ]
 
