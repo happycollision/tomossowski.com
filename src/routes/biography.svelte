@@ -3,6 +3,11 @@
 </script>
 
 <div class="max-w-xl m-auto">
+  <img
+    class="block my-4 max-w-full sm:mr-2 sm:my-2 sm:float-left sm:max-w-sm"
+    src="/images/tom-headshot.jpg"
+    alt="Tom's portrait"
+  />
   <Markdown
     source={`
 Associate Professor --- Florida State University  
