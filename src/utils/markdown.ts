@@ -4,6 +4,7 @@ export function markdown(str: string, classes: Classes = {}) {
   const injectClass = getClass.bind(null, classes)
   return smartyPants(str)
     .replace(...singleReturn(injectClass))
+    .replace(...collapsibleReturn(injectClass))
     .replace(...bold(injectClass))
     .replace(...italic(injectClass))
     .replace(...paragraph(injectClass))
@@ -28,6 +29,10 @@ type ReplaceArgs = Parameters<string["replace"]>
 type Replacer = (injectClass: (tag: string) => string) => ReplaceArgs
 
 const singleReturn: Replacer = () => [/  \n/g, () => "<br>"]
+const collapsibleReturn: Replacer = () => [
+  /\n([^\n])/g,
+  (_, char) => " " + char,
+]
 
 const paragraph: Replacer = (injectClass) => [
   /**
