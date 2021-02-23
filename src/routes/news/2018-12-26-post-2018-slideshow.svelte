@@ -142,12 +142,12 @@
   ].map((x) => ({ image: `${folder}/${x.image}` }))
 </script>
 
-<p>
+<p class="my-4 max-w-lg mx-auto">
   Under Producing Artistic Direction from Tom Ossowski, Post Playhouse had a
   phenominal 2018 Summer Season.
 </p>
 
-<Carousel perPage={{ 1100: 2 }} autoplay={3000}>
+<Carousel perPage={{ 1100: 2 }} autoplay={3000} dots={false}>
   {#each shuffle(slides) as slide}
     <div class="flex items-center h-80 justify-center">
       <img
