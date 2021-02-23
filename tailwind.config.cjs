@@ -27,6 +27,9 @@ module.exports = {
       maxWidth: {
         72: "18rem",
       },
+      screens: {
+        xs: "460px",
+      },
     },
   },
   variants: {
