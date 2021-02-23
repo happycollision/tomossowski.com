@@ -7,6 +7,7 @@ export function markdown(str: string, classes: Classes = {}) {
     .replace(...bold(injectClass))
     .replace(...italic(injectClass))
     .replace(...paragraph(injectClass))
+    .replace(...link(injectClass))
 }
 
 export function smartyPants(str: string): string {
@@ -62,6 +63,12 @@ const bold: Replacer = (injectClass) => [
 const italic: Replacer = (injectClass) => [
   makeFindWrapper(["_", "\\*"]),
   (_, str1, str2) => `<em${injectClass("em")}>${str1 || str2}</em>`,
+]
+
+const link: Replacer = (injectClass) => [
+  /\[(.*?)\]\((.*?)\)/g,
+  (_, linkText, linkHref) =>
+    `<a${injectClass("a")} href="${linkHref}">${linkText}</a>`,
 ]
 
 // Naive ampersand replace

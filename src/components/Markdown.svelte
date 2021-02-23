@@ -2,6 +2,7 @@
   import { markdown } from "$utils/markdown"
   const defaultClasses = {
     p: "my-4",
+    a: "link",
   }
 </script>
 
