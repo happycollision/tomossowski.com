@@ -1,9 +1,6 @@
 <script lang="ts" context="module">
-  export const title = "Guys and Dolls at FSU"
-</script>
-
-<script lang="ts">
   import VideoItem from "$components/portfolio/VideoItem.svelte"
+  export const title = "Guys and Dolls at FSU"
 </script>
 
 <p class="my-4">Conducting and Music Direction by Tom Ossowski.</p>
