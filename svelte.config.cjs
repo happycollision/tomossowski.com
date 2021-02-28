@@ -2,6 +2,14 @@ const svelte = require("svelte/compiler")
 const sveltePreprocess = require("svelte-preprocess")
 const image = require("svelte-image")
 
+const imagePreprocessor = image({
+  processFolders: ["images"],
+  processFoldersRecursively: true,
+  // @ts-expect-error
+  processFoldersSizes: [400, 800, 1200],
+  processFoldersExtensions: ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"],
+})
+
 function runImagesAfterOthers(otherProcessors) {
   return {
     markup: async ({ content, filename }) => {
@@ -12,13 +20,7 @@ function runImagesAfterOthers(otherProcessors) {
       )
       content = otherProcessorsReturn.code
 
-      const { code } = await image({
-        processFolders: ["images"],
-        processFoldersRecursively: true,
-        // @ts-expect-error
-        processFoldersSizes: [400, 800, 1200],
-        processFoldersExtensions: ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"],
-      }).markup({ content, filename })
+      const { code } = await imagePreprocessor.markup({ content, filename })
       return {
         ...otherProcessorsReturn,
         code,
