@@ -1,9 +1,10 @@
 <script>
+  import Img from "$components/Img.svelte"
   import Markdown from "$components/Markdown.svelte"
 </script>
 
 <div class="max-w-xl m-auto">
-  <img
+  <Img
     class="block my-4 max-w-full sm:mr-2 sm:my-2 sm:float-left sm:max-w-sm"
     src="/images/tom-headshot.jpg"
     alt="Tom's portrait"

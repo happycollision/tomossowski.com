@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Img from "$components/Img.svelte"
   import PlayPausePortfolioBtn from "./PlayPausePortfolioBtn.svelte"
 
   export let src: string
@@ -53,7 +54,7 @@
   class="relative rounded-lg overflow-hidden bg-black flex items-center {className}"
 >
   {#if unload}
-    <img class="object-cover h-52 w-full" {alt} src={poster} />
+    <Img class="object-cover h-52 w-full" {alt} src={poster} />
   {/if}
   {#if unload || (!controls && !playing)}
     <PlayPausePortfolioBtn name={playing ? "pause" : "play"} />

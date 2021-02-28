@@ -1,4 +1,5 @@
 <script lang="ts" context="module">
+  import Img from "$components/Img.svelte"
   import Markdown from "$components/Markdown.svelte"
 
   export const title = "The Family"
@@ -13,7 +14,7 @@ Director.
 `}
 />
 
-<img
+<Img
   class="max-w-full max-h-80"
   src="/images/the-family-poster.jpg"
   alt="poster art for The Family"

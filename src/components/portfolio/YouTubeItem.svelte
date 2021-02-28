@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Img from "$components/Img.svelte"
   import YouTube from "$components/YouTube.svelte"
   import PlayPausePortfolioBtn from "./PlayPausePortfolioBtn.svelte"
 
@@ -17,7 +18,7 @@
 
 <div class="relative rounded-lg overflow-hidden {className}">
   {#if unload}
-    <img class="object-cover h-52 w-full" {alt} src={poster} />
+    <Img class="object-cover h-52 w-full" {alt} src={poster} />
     <PlayPausePortfolioBtn name="play" />
   {:else}
     <YouTube {id} {start} {end} class="w-full h-full" {autoplay} {controls} />

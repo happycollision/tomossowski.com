@@ -4,6 +4,7 @@
 
 <script lang="ts">
   import Carousel from "$components/Carousel.svelte"
+  import Img from "$components/Img.svelte"
   import { shuffle } from "$utils/array"
 
   const folder = "/images/post2018"
@@ -150,7 +151,7 @@
 <Carousel perPage={{ 1100: 2 }} autoplay={3000} dots={false}>
   {#each shuffle(slides) as slide}
     <div class="flex items-center h-80 justify-center">
-      <img
+      <Img
         class="max-w-full max-h-full"
         src={slide.image}
         alt="scene from a 2018 production"
