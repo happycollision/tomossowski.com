@@ -4,10 +4,10 @@ export function markdown(str: string, classes: Classes = {}) {
   const injectClass = getClass.bind(null, classes)
   return smartyPants(str)
     .replace(...singleReturn(injectClass))
+    .replace(...paragraph(injectClass))
     .replace(...collapsibleReturn(injectClass))
     .replace(...bold(injectClass))
     .replace(...italic(injectClass))
-    .replace(...paragraph(injectClass))
     .replace(...link(injectClass))
 }
 
