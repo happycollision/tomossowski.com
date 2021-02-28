@@ -20,12 +20,10 @@
   let videoEl: HTMLVideoElement | undefined
   let playing: boolean = false
 
-  function handleClick(evt: SvelteEvent<MouseEvent, HTMLVideoElement>) {
-    evt.stopPropagation()
-    if (!controls) {
-      evt.currentTarget.paused
-        ? evt.currentTarget.play()
-        : evt.currentTarget.pause()
+  function handleClick(evt: SvelteEvent<MouseEvent, HTMLElement>) {
+    if (evt.currentTarget === videoEl) evt.stopPropagation()
+    if (!controls && videoEl) {
+      videoEl.paused ? videoEl.play() : videoEl.pause()
     }
   }
 
@@ -51,13 +49,16 @@
 </script>
 
 <div
-  class="relative rounded-lg overflow-hidden bg-black flex items-center {className}"
+  class="relative rounded-lg overflow-hidden bg-black flex items-center group {className}"
 >
   {#if unload}
     <Img class="object-cover h-52 w-full" {alt} src={poster} />
   {/if}
   {#if unload || (!controls && !playing)}
-    <PlayPausePortfolioBtn name={playing ? "pause" : "play"} />
+    <PlayPausePortfolioBtn
+      name={playing ? "pause" : "play"}
+      on:click={handleClick}
+    />
   {/if}
   <!-- svelte-ignore a11y-media-has-caption -->
   {#if !unload}
