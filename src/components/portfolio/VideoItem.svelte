@@ -49,7 +49,7 @@
 </script>
 
 <div
-  class="relative rounded-lg overflow-hidden bg-black border border-blue-900 cursor-pointer flex items-center group {className}"
+  class="relative rounded-lg overflow-hidden bg-black border-4 border-blue-500 dark:border-blue-900 cursor-pointer flex items-center group {className}"
 >
   {#if unload}
     <Img class="object-cover h-52 w-full" {alt} src={poster} />

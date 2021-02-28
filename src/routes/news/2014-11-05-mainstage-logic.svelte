@@ -37,7 +37,7 @@ Tom Ossowski Conducting
 
 <button
   on:click={toggleModal}
-  class="bg-blue-700 rounded-lg py-2 px-3 my-2 hover:bg-blue-600 hover:text-white"
+  class="bg-blue-500 rounded-lg py-2 px-3 my-2 hover:bg-blue-600 text-white dark:bg-blue-900 dark:hover:bg-blue-800  dark:text-opacity-75"
   >View Instrumentation</button
 >
 

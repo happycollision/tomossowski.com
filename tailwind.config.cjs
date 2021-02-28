@@ -33,7 +33,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ["dark"],
+      textOpacity: ["dark"],
+    },
   },
   plugins: [],
 }

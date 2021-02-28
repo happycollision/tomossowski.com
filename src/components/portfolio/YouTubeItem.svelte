@@ -17,7 +17,7 @@
 </script>
 
 <div
-  class="relative rounded-lg overflow-hidden border border-blue-900 cursor-pointer {className}"
+  class="relative rounded-lg overflow-hidden border-4 border-blue-500 dark:border-blue-900 cursor-pointer {className}"
 >
   {#if unload}
     <Img class="object-cover h-52 w-full" {alt} src={poster} />

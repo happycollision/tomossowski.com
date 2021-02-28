@@ -224,7 +224,7 @@
   {#each portfolio as pItem}
     <button
       on:click={() => handleMedia(pItem)}
-      class="mx-auto text-left w-full max-w-72 rounded-lg overflow-hidden bg-blue-900 border-2 border-blue-900 group"
+      class="mx-auto text-left w-full max-w-72 rounded-lg overflow-hidden border-4 bg-blue-500 border-blue-500 dark:bg-blue-900 dark:border-blue-900 group"
     >
       {#if pItem.type === "youtube"}
         <YouTubeItem
@@ -236,7 +236,7 @@
           unload={pItem !== chosenItem}
           autoplay
           controls
-          class="w-full h-52"
+          class="w-full h-52 border-none"
         />
       {:else if pItem.type === "audio"}
         <AudioItem
@@ -246,6 +246,7 @@
           unload={pItem !== chosenItem}
           controls
           autoplay
+          class="w-full h-52 border-none"
         />
       {:else if pItem.type === "video"}
         <VideoItem
@@ -256,11 +257,11 @@
           autoplay
           controls
           preload="none"
-          class="w-full h-52"
+          class="w-full h-52 border-none"
         />
       {/if}
 
-      <div class="p-2 opacity-75">
+      <div class="p-1 dark:opacity-75">
         <div class="text-sm">{pItem.displayStats.theatre}</div>
         <h3 class="font-bold text-xl">
           {@html smartyPants(pItem.title)}
