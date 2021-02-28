@@ -1,5 +1,5 @@
 {
-  "name": "jekyll.tomossowski.com",
+  "name": "tomossowski.com",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
