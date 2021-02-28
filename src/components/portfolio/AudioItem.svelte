@@ -28,7 +28,7 @@
 </script>
 
 <div
-  class="relative rounded-lg overflow-hidden {className}"
+  class="relative rounded-lg border border-blue-900 cursor-pointer overflow-hidden {className}"
   on:click={handleClick}
 >
   <Img class="object-cover h-52 w-full" {alt} src={poster} />

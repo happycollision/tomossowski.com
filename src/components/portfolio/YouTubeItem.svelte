@@ -16,7 +16,9 @@
   export { className as class }
 </script>
 
-<div class="relative rounded-lg overflow-hidden {className}">
+<div
+  class="relative rounded-lg overflow-hidden border border-blue-900 cursor-pointer {className}"
+>
   {#if unload}
     <Img class="object-cover h-52 w-full" {alt} src={poster} />
     <PlayPausePortfolioBtn name="play" />
