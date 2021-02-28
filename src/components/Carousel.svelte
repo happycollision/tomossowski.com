@@ -21,6 +21,7 @@
 
 {#if mounted}
   <Carousel
+    on:change
     {loop}
     {perPage}
     {autoplay}
@@ -36,7 +37,7 @@
   >
     <span slot="left-control">
       <svg
-        class="fill-current opacity-80 hover:opacity-100"
+        class="fill-current opacity-80 hover:opacity-100 glow"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
       >
@@ -48,7 +49,7 @@
     <slot />
     <span slot="right-control">
       <svg
-        class="fill-current opacity-80 hover:opacity-100"
+        class="fill-current opacity-80 hover:opacity-100 glow"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
       >
@@ -59,3 +60,14 @@
     </span>
   </Carousel>
 {/if}
+
+<style>
+  .glow {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+  }
+  @media (prefers-color-scheme: dark) {
+    .glow {
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+    }
+  }
+</style>
