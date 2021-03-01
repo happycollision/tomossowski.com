@@ -6,5 +6,5 @@
 <PlayPauseBtn
   on:click
   {name}
-  class="fill-current absolute bottom-2 left-2 w-1/4 opacity-40 group-hover:opacity-60"
+  class="fill-current text-white absolute bottom-2 left-2 w-1/4 opacity-40 group-hover:opacity-60"
 />
