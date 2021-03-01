@@ -2,7 +2,7 @@
   "name": "tomossowski.com",
   "version": "0.0.1",
   "scripts": {
-    "copyFolder": "./scripts/copy_folder",
+    "copyFolder": "./scripts/copy_folder.cjs",
     "useCache": "npm run copyFolder -- --merge /opt/build/cache/hc_my_cache/static/g --to static/g",
     "fillCache": "npm run copyFolder -- --save static/g --to /opt/build/cache/hc_my_cache/static/g",
     "dev": "svelte-kit dev",
