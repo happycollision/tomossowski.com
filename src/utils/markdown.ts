@@ -36,12 +36,16 @@ const collapsibleReturn: Replacer = () => [
 
 const paragraph: Replacer = (injectClass) => [
   /**
-   * (?:^|\n)
-   *   Start of source or start of line
-   * (?:\n\n|\n$|$)
-   *   Start of new para or end of source (and possible extra \n)
+   * (?:^\n?|\n\n)
+   *   Start of source or start of line after two returns
+   * (?=\n\n|\n$|$)
+   *   Lookahead end of para or end of source
+   *
+   * The lookahead above prevents consumeing characters, which then makes it
+   * possible to immediately count the two line breaks as the start of the next
+   * paragraph.
    */
-  /(?:^|\n)(.*)(?:\n\n|\n$|$)/g,
+  /(?:^\n?|\n\n)(.*?)(?=\n\n|\n?$)/g,
   (_, para) => `<p${injectClass("p")}>${para}</p>`,
 ]
 
@@ -77,7 +81,10 @@ const link: Replacer = (injectClass) => [
 ]
 
 // Naive ampersand replace
-const amp: ReplaceArgs = [/&/g, () => `&amp;`]
+const amp: ReplaceArgs = [
+  /&([^;\s]{2,8};)?/g,
+  (fullMatch, maybeCarCode) => (maybeCarCode ? fullMatch : `&amp;`),
+]
 
 const emDash: ReplaceArgs = [
   /([^-])---([^-])/g,
