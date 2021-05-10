@@ -25,10 +25,106 @@
 
   const allCredits = [
     {
+      year: 2021,
+      title: "Edges",
+      company: FSU,
+      positions:[MUSIC_DIRECTOR]
+    },
+    {
+      year: 2020,
+      title: "In the Heights",
+      company: FSU,
+      positions:[MUSIC_DIRECTOR, CONDUCTOR]
+    },
+    {
+      year: 2019,
+      title: "Hairspray",
+      company: FSU,
+      positions:[MUSIC_DIRECTOR, CONDUCTOR]
+    },
+    {
+      year: 2019,
+      title: "The Music Man",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2018,
+      title: "A New Brain",
+      company: FSU,
+      positions:[DIRECTOR, MUSIC_DIRECTOR]
+    },
+    {
+      year: 2018,
+      title: "Disney's The Little Mermaid",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2018,
+      title: "Chitty Chitty Bang Bang",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2018,
+      title: "Footloose",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2018,
+      title: "42nd Street",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2018,
+      title: "Urinetown",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR, DIRECTOR]
+    },
+    {
+      year: 2017,
+      title: "Crazy for You",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2017,
+      title: "Chicago",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2017,
+      title: "Mamma Mia!",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2017,
+      title: "Shrek",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
+      year: 2017,
+      title: "Young Frankenstein",
+      company: POST,
+      positions:[PRODUCER, ARTISTIC_DIRECTOR]
+    },
+    {
       year: 2017,
       title: "Lucky Stiff",
       company: CHINA,
       positions: [DIRECTOR],
+    },
+    {
+      year: 2017,
+      title: "Guys And Dolls",
+      company: FSU,
+      positions: [MUSIC_DIRECTOR, CONDUCTOR],
     },
     {
       year: 2017,
