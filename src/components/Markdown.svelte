@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import { markdown } from "$utils/markdown"
+  import { markdown } from "$lib/utils/markdown"
   const defaultClasses = {
     p: "my-4",
     a: "link",

@@ -11,18 +11,19 @@
 </script>
 
 <Markdown
-  source={`
+  source="{`
 Live Recording
 *How To Succeed in Business Without Really Trying*
 Florida State University Fall 2012
 Tom Ossowski Conducting
-`}
+`}"
 />
 
 <div>
   Overture<br />
   <!-- svelte-ignore a11y-media-has-caption -->
-  <audio src="/media/how-to-succeed-overture.mp3" controls preload="metadata" />
+  <audio src="/media/how-to-succeed-overture.mp3" controls preload="metadata"
+  ></audio>
 </div>
 
 <div>
@@ -31,18 +32,17 @@ Tom Ossowski Conducting
   <audio
     src="/media/how-to-succeed-coffee-break.mp3"
     controls
-    preload="metadata"
-  />
+    preload="metadata"></audio>
 </div>
 
 <button
-  on:click={toggleModal}
+  on:click="{toggleModal}"
   class="bg-blue-500 rounded-lg py-2 px-3 my-2 hover:bg-blue-600 text-white dark:bg-blue-900 dark:hover:bg-blue-800  dark:text-opacity-75"
   >View Instrumentation</button
 >
 
 {#if showModal}
-  <Modal on:close={toggleModal}>
+  <Modal on:close="{toggleModal}">
     <h4 class="my-4 text-lg">Live Musicians</h4>
 
     <ul class="pl-4">

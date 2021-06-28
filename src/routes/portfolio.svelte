@@ -2,7 +2,7 @@
   import AudioItem from "$components/portfolio/AudioItem.svelte"
   import VideoItem from "$components/portfolio/VideoItem.svelte"
   import YouTubeItem from "$components/portfolio/YouTubeItem.svelte"
-  import { smartyPants } from "$utils/markdown"
+  import { smartyPants } from "$lib/utils/markdown"
 
   type YtItem = {
     type: "youtube"
@@ -223,37 +223,37 @@
 >
   {#each portfolio as pItem}
     <button
-      on:click={() => handleMedia(pItem)}
+      on:click="{() => handleMedia(pItem)}"
       class="mx-auto text-left w-full max-w-72 rounded-lg overflow-hidden border-4 bg-blue-500 border-blue-500 dark:bg-blue-900 dark:border-blue-900 group"
     >
       {#if pItem.type === "youtube"}
         <YouTubeItem
-          id={pItem.media.id}
-          start={pItem.media.start}
-          end={pItem.media.end}
+          id="{pItem.media.id}"
+          start="{pItem.media.start}"
+          end="{pItem.media.end}"
           poster="/images/portfolio/{pItem.image}"
-          alt={pItem.title}
-          unload={pItem !== chosenItem}
+          alt="{pItem.title}"
+          unload="{pItem !== chosenItem}"
           autoplay
           controls
           class="w-full h-52 border-none"
         />
       {:else if pItem.type === "audio"}
         <AudioItem
-          src={`/media/${pItem.media}`}
+          src="{`/media/${pItem.media}`}"
           poster="/images/portfolio/{pItem.image}"
-          alt={pItem.title}
-          unload={pItem !== chosenItem}
+          alt="{pItem.title}"
+          unload="{pItem !== chosenItem}"
           controls
           autoplay
           class="w-full h-52 border-none"
         />
       {:else if pItem.type === "video"}
         <VideoItem
-          src={`/media/${pItem.media}`}
+          src="{`/media/${pItem.media}`}"
           poster="/images/portfolio/{pItem.image}"
-          alt={pItem.title}
-          unload={pItem !== chosenItem}
+          alt="{pItem.title}"
+          unload="{pItem !== chosenItem}"
           autoplay
           controls
           preload="none"

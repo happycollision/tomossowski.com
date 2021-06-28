@@ -18,8 +18,8 @@
 <!-- the parent is hidden, but the child with the `ref` will be appended
 elsehwere in the DOM via `onMount` -->
 <div class="hidden">
-  <div bind:this={ref.current} transition:fade={{ duration: 200 }}>
-    <ModalBase {dispatch}>
+  <div bind:this="{ref.current}" transition:fade="{{ duration: 200 }}">
+    <ModalBase dispatch="{dispatch}">
       <slot />
     </ModalBase>
   </div>

@@ -6,10 +6,10 @@
 </script>
 
 <Markdown
-  source={`
+  source="{`
 Tom was the Music Director and Conductor for FloridaState University's October
 production of _A Chorus Line_.
-`}
+`}"
 />
 
 <Img

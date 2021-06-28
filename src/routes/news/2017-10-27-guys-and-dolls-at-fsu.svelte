@@ -13,8 +13,8 @@
 
 <h3 class="text-lg mt-4">Bushel and a Peck</h3>
 <!-- svelte-ignore a11y-media-has-caption -->
-<audio preload="metadata" src="/media/bushel-peck.mp3" controls />
+<audio preload="metadata" src="/media/bushel-peck.mp3" controls></audio>
 
 <h3 class="text-lg mt-4">Sit Down You're Rocking the Boat</h3>
 <!-- svelte-ignore a11y-media-has-caption -->
-<audio preload="metadata" src="/media/rocking-boat.mp3" controls />
+<audio preload="metadata" src="/media/rocking-boat.mp3" controls></audio>

@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { smartyPants } from "$utils/markdown"
-  import { tapLog } from "$utils/tap"
+  import { smartyPants } from "$lib/utils/markdown"
 
   const ARTISTIC_DIRECTOR = "Artistic Director"
   const MUSIC_DIRECTOR = "Music Director"
@@ -788,31 +787,44 @@
   }
 </script>
 
+<style>
+  .year::before {
+    content: "(";
+  }
+  .year::after {
+    content: ")";
+  }
+
+  .active {
+    @apply bg-blue-600 text-white;
+  }
+</style>
+
 <div class="text-center m-4">
   <div class="inline-flex flex-wrap rounded-lg sm:border-blue-600 sm:border-2">
     <button
       class="min-w-20 py-1 px-3 m-1 border-2 border-blue-600 rounded-lg sm:m-auto sm:border-none sm:rounded-none"
-      on:click={setChosen}
+      on:click="{setChosen}"
       value="all"
-      class:active={"all" === chosen}>All</button
+      class:active="{'all' === chosen}">All</button
     >
     <button
       class="min-w-20 py-1 px-3 m-1 border-2 border-blue-600 rounded-lg sm:m-auto sm:border-none sm:rounded-none"
-      on:click={setChosen}
+      on:click="{setChosen}"
       value="art"
-      class:active={"art" === chosen}>Artistic Director</button
+      class:active="{'art' === chosen}">Artistic Director</button
     >
     <button
       class="min-w-20 py-1 px-3 m-1 border-2 border-blue-600 rounded-lg sm:m-auto sm:border-none sm:rounded-none"
-      on:click={setChosen}
+      on:click="{setChosen}"
       value="md"
-      class:active={"md" === chosen}>Music Director</button
+      class:active="{'md' === chosen}">Music Director</button
     >
     <button
       class="min-w-20 py-1 px-3 m-1 border-2 border-blue-600 rounded-lg sm:m-auto sm:border-none sm:rounded-none"
-      on:click={setChosen}
+      on:click="{setChosen}"
       value="dir"
-      class:active={"dir" === chosen}>Director</button
+      class:active="{'dir' === chosen}">Director</button
     >
   </div>
 </div>
@@ -827,16 +839,3 @@
     </div>
   {/each}
 </div>
-
-<style>
-  .year::before {
-    content: "(";
-  }
-  .year::after {
-    content: ")";
-  }
-
-  .active {
-    @apply bg-blue-600 text-white;
-  }
-</style>

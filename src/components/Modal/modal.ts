@@ -11,7 +11,9 @@ export function lifecycle(ref: { current: HTMLElement }, name: string) {
     return () => {
       try {
         document.body.removeChild(portal)
-      } catch {}
+      } catch {
+        // noop
+      }
     }
   })
 }

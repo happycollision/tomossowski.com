@@ -5,7 +5,7 @@
 <script lang="ts">
   import Carousel from "$components/Carousel.svelte"
   import Img from "$components/Img.svelte"
-  import { shuffle } from "$utils/array"
+  import { shuffle } from "$lib/utils/array"
 
   const folder = "/images/post2018"
   const slides = shuffle(
@@ -171,13 +171,13 @@
   phenominal 2018 Summer Season.
 </p>
 
-<Carousel perPage={{ 1100: 2 }} dots={false} on:change={updateLoaded}>
+<Carousel perPage="{{ 1100: 2 }}" dots="{false}" on:change="{updateLoaded}">
   {#each slides as slide, i}
     <div class="flex items-center h-80 justify-center">
       {#if loadedIndicies.includes(i)}
         <Img
           class="max-w-full max-h-full"
-          src={slide.image}
+          src="{slide.image}"
           alt="scene from a 2018 production"
         />
       {/if}
