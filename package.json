@@ -17,7 +17,6 @@
     "netlify": "npm run useCache && npm run build && npm run fillCache"
   },
   "devDependencies": {
-    "@beyonk/svelte-carousel": "^2.8.0",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "@types/jest": "^26.0.23",
