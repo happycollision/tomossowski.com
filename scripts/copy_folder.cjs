@@ -144,7 +144,7 @@ function recursiveCopyFiles(oldFolder, newFolder) {
   return Promise.all(flatten([copyingFiles, copyingFolders]))
 }
 
-;(async function() {
+;(async function () {
   if (action === "save") {
     // we want to overwrite the destination
     await rimrafContents(sendTo)

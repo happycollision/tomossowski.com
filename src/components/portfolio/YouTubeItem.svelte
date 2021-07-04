@@ -20,9 +20,16 @@
   class="relative rounded-lg overflow-hidden border-4 border-blue-500 dark:border-blue-900 cursor-pointer {className}"
 >
   {#if unload}
-    <Img class="object-cover h-52 w-full" {alt} src={poster} />
+    <Img class="object-cover h-52 w-full" alt="{alt}" src="{poster}" />
     <PlayPausePortfolioBtn name="play" />
   {:else}
-    <YouTube {id} {start} {end} class="w-full h-full" {autoplay} {controls} />
+    <YouTube
+      id="{id}"
+      start="{start}"
+      end="{end}"
+      class="w-full h-full"
+      autoplay="{autoplay}"
+      controls="{controls}"
+    />
   {/if}
 </div>

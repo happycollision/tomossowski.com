@@ -18,7 +18,7 @@
   let preload = unload ? "none" : preloadIn
 
   let videoEl: HTMLVideoElement | undefined
-  let playing: boolean = false
+  let playing = false
 
   function handleClick(evt: SvelteEvent<MouseEvent, HTMLElement>) {
     if (evt.currentTarget === videoEl) evt.stopPropagation()
@@ -52,26 +52,25 @@
   class="relative rounded-lg overflow-hidden bg-black border-4 border-blue-500 dark:border-blue-900 cursor-pointer flex items-center group {className}"
 >
   {#if unload}
-    <Img class="object-cover h-52 w-full" {alt} src={poster} />
+    <Img class="object-cover h-52 w-full" alt="{alt}" src="{poster}" />
   {/if}
   {#if unload || (!controls && !playing)}
     <PlayPausePortfolioBtn
-      name={playing ? "pause" : "play"}
-      on:click={handleClick}
+      name="{playing ? 'pause' : 'play'}"
+      on:click="{handleClick}"
     />
   {/if}
   <!-- svelte-ignore a11y-media-has-caption -->
   {#if !unload}
     <video
-      bind:this={videoEl}
-      on:click={handleClick}
-      on:pause={() => (playing = false)}
-      on:play={() => (playing = true)}
-      {poster}
-      {src}
-      {controls}
-      {autoplay}
-      {preload}
-    />
+      bind:this="{videoEl}"
+      on:click="{handleClick}"
+      on:pause="{() => (playing = false)}"
+      on:play="{() => (playing = true)}"
+      poster="{poster}"
+      src="{src}"
+      controls="{controls}"
+      autoplay="{autoplay}"
+      preload="{preload}"></video>
   {/if}
 </div>

@@ -39,18 +39,13 @@
     {#each mainNav as navItem}
       <li>
         <a
-          class="block px-4 py-1 hover:bg-green-500 dark:hover:bg-green-700"
-          use:active={path}
+          class="block px-4 py-1 hover:bg-green-500 dark:hover:bg-green-700
+          {path === navItem.url ? 'bg-green-500 dark:bg-green-700' : ''}"
+          use:active="{path}"
           rel="prefetch"
-          href={navItem.url}>{@html navItem.name}</a
+          href="{navItem.url}">{@html navItem.name}</a
         >
       </li>
     {/each}
   </ul>
 </nav>
-
-<style>
-  li > :global([aria-active="page"]) {
-    @apply bg-green-500 dark:bg-green-700;
-  }
-</style>

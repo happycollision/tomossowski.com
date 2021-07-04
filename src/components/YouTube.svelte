@@ -22,8 +22,8 @@
   let apiFrameReady = false
 
   onMount(() => {
-    const scriptTags = document.getElementsByTagName("script")
-    for (const tag of scriptTags) {
+    const scriptTags = document.querySelectorAll("script")
+    for (const tag of Array.from(scriptTags)) {
       // only add the script tag once per user session
       if (tag.src === YT_SCRIPT_URL) return (apiFrameReady = true)
     }
@@ -39,7 +39,7 @@
   // 3. This function creates an <iframe> (and YouTube player)
   //    after the API code downloads.
   function createIframeAndPlay() {
-    // @ts-expect-error
+    // @ts-expect-error (YT exists in the DOM)
     player = new YT.Player("player", {
       // height: "390",
       // width: "640",
@@ -64,5 +64,5 @@
 </script>
 
 <div class="w-full h-full">
-  <div class={className} id="player" />
+  <div class="{className}" id="player"></div>
 </div>

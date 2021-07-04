@@ -28,6 +28,7 @@ type ReplaceArgs = Parameters<string["replace"]>
 
 type Replacer = (injectClass: (tag: string) => string) => ReplaceArgs
 
+// eslint-disable-next-line no-regex-spaces
 const singleReturn: Replacer = () => [/  \n/g, () => "<br>"]
 const collapsibleReturn: Replacer = () => [
   /\n([^\n])/g,

@@ -29,25 +29,24 @@
 
 <div
   class="relative rounded-lg border-4 border-blue-500 dark:border-blue-900 cursor-pointer overflow-hidden {className}"
-  on:click={handleClick}
+  on:click="{handleClick}"
 >
-  <Img class="object-cover h-52 w-full" {alt} src={poster} />
+  <Img class="object-cover h-52 w-full" alt="{alt}" src="{poster}" />
   {#if unload || !controls}
-    <PlayPausePortfolioBtn name={playing ? "pause" : "play"} />
+    <PlayPausePortfolioBtn name="{playing ? 'pause' : 'play'}" />
   {/if}
   {#if !unload}
     <div class="absolute bottom-2 w-full flex">
       <!-- svelte-ignore a11y-media-has-caption -->
       <audio
         class="mx-2 flex-grow"
-        bind:this={audioEl}
-        on:pause={() => (playing = false)}
-        on:play={() => (playing = true)}
-        on:click={handleAudioClick}
-        {src}
-        {controls}
-        {autoplay}
-      />
+        bind:this="{audioEl}"
+        on:pause="{() => (playing = false)}"
+        on:play="{() => (playing = true)}"
+        on:click="{handleAudioClick}"
+        src="{src}"
+        controls="{controls}"
+        autoplay="{autoplay}"></audio>
     </div>
   {/if}
 </div>

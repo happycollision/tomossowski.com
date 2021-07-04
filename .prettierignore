@@ -1,1 +1,5 @@
-jekyll-archive
+.svelte-kit/**
+static/**
+build/**
+node_modules/**
+jekyll-archive/**

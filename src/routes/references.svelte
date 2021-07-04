@@ -4,7 +4,7 @@
 
 <div class="max-w-xl m-auto">
   <Markdown
-    source={`
+    source="{`
 __Kris Salata__  
 [ksalata@fsu.edu](mailto:ksalata@fsu.edu)  
 415-810-4439  
@@ -29,6 +29,6 @@ President of the Board of Directors, Post Playhouse
 (308) 762-4693  
 1208 Laramie Avenue  
 Alliance, NE 69301
-`}
+`}"
   />
 </div>

@@ -25,4 +25,4 @@
   }
 </script>
 
-<img {src} on:error={nextSrc} {alt} {...$$restProps} />
+<img src="{src}" on:error="{nextSrc}" alt="{alt}" {...$$restProps} />
